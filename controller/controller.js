@@ -48,8 +48,11 @@ const controllers = {
         } catch (error) {
             res.status(501).json({error})
         }
+    },
+    eliminarProducto: async (req,res) =>{
+        const product = await Product.findByIdAndDelete(req.params.id);
+        res.status(204).json({product})
     }
-
 }
 
 module.exports = controllers;

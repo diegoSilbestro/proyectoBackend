@@ -1,6 +1,6 @@
 const {Product} = require ("../models/products")
 
-const validarId = async (req,res,next) =>{
+const validarId = async (req, res, next) =>{
     try {
         const item = await Product.findById (req.params.id)
         if (item !== null) {

@@ -25,5 +25,9 @@ router.put('/editarProducto/:id', validarId,[
     check("price").not().isEmpty().withMessage("Debe ingresar un precio").isNumeric().withMessage("El precio debe ser un número")
 ] , controllers.editProduct)
 
+/* DELETE */
+
+router.delete('/eliminarProducto/:id', validarId, controllers.eliminarProducto)
+
 
 module.exports = router;
