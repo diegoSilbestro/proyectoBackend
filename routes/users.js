@@ -29,5 +29,9 @@ router.put('/editarProducto/:id', validarId,[
 
 router.delete('/eliminarProducto/:id', validarId, controllers.eliminarProducto)
 
+/* API externa*/
+
+router.get('/clima/:lat/:lon', controllers.consultaApiExterna)
+
 
 module.exports = router;
