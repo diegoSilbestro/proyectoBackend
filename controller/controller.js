@@ -53,7 +53,7 @@ const controllers = {
     },
     eliminarProducto: async (req,res) =>{
         const product = await Product.findByIdAndDelete(req.params.id);
-        res.status(204).json({msg: 'El siguiente producto fue eliminado', product})
+        res.status(200).json({msg: 'El siguiente producto fue eliminado', product})
     },
     consultaApiExterna: async (req, res) => {
         try {
